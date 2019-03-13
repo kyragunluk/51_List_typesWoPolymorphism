@@ -89,31 +89,24 @@ public class List_inArraySlots {
           System.out.println( "expand... (for debugging)");
           int[] intStorage = intElements; //store old list
           intElements = new int[2 * filledElements]; //create new list
-          for(int i = 0; i < intStorage.length; i++) //repopulate with old values
-            intElements[i] = intStorage[i];
           double[] doubleStorage = doubleElements; //store old list
           doubleElements = new double[2 * filledElements]; //create new list
-          for(int i = 0; i < doubleStorage.length; i++) //repopulate with old values
-            doubleElements[i] = doubleStorage[i];
           String[] stringStorage = stringElements; //store old list
           stringElements = new String[2 * filledElements]; //create new list
-          for(int i = 0; i < stringStorage.length; i++) //repopulate with old values
-            stringElements[i] = stringStorage[i];
           int[] typeStorage = typeOfElements; //store old list
           typeOfElements = new int[2 * filledElements]; //create new list
-          for(int i = 0; i < typeStorage.length; i++) //repopulate with old values
+          for(int i = 0; i < filledElements; i++){ //repopulate with old values
+            intElements[i] = intStorage[i];
+            doubleElements[i] = doubleStorage[i];
+            stringElements[i] = stringStorage[i];
             typeOfElements[i] = typeStorage[i];
-
+          }
       }
-/*
       public Element get(int index){
-        if (typeOfElement[index] == 0)
-            return intElements[index];
-        else if (typeOfElements[index] == 1)
-            return doubleElements[index];
-        else if (typeOfElements[index] == 2)
-            return stringElements[index];
+          Element newElem = new Element (typeOfElements[index],
+                                         intElements[index],
+                                         doubleElements[index],
+                                         stringElements[index]);
+          return newElem;
       }
-*/
-
 }
