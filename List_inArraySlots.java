@@ -105,4 +105,15 @@ public class List_inArraySlots {
             typeOfElements[i] = typeStorage[i];
 
       }
+/*
+      public Element get(int index){
+        if (typeOfElement[index] == 0)
+            return intElements[index];
+        else if (typeOfElements[index] == 1)
+            return doubleElements[index];
+        else if (typeOfElements[index] == 2)
+            return stringElements[index];
+      }
+*/
+
 }
